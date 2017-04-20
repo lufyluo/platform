@@ -46,12 +46,12 @@ namespace Lufy.Filter.Authorization
             try
             {
                 //获取数据库Token  
-                Dec.Models.TicketAuth model = Dec.BLL.TicketAuth.GetTicketAuthByToken(encryptToken);
-                if (model.Token == encryptToken) //存在  
-                {
-                    //未超时  
-                    flag = (DateTime.Now <= model.ExpireDate) ? true : false;
-                }
+                //Dec.Models.TicketAuth model = Dec.BLL.TicketAuth.GetTicketAuthByToken(encryptToken);
+                //if (model.Token == encryptToken) //存在  
+                //{
+                //    //未超时  
+                //    flag = (DateTime.Now <= model.ExpireDate) ? true : false;
+                //}
             }
             catch (Exception ex) { }
             return flag;
