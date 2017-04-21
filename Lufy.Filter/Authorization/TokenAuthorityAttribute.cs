@@ -45,6 +45,7 @@ namespace Lufy.Filter.Authorization
             bool flag = false;
             try
             {
+
                 //获取数据库Token  
                 //Dec.Models.TicketAuth model = Dec.BLL.TicketAuth.GetTicketAuthByToken(encryptToken);
                 //if (model.Token == encryptToken) //存在  
