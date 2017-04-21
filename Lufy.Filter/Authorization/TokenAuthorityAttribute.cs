@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Controllers;
+using Lufy.Filter.Cache;
 
 namespace Lufy.Filter.Authorization
 {
@@ -39,23 +40,10 @@ namespace Lufy.Filter.Authorization
             }
         }
 
-        //校验票据（数据库数据匹配）  
-        private bool ValidateTicket(string encryptToken)
+        //校验票据（内存数据匹配）  
+        private bool ValidateTicket(string token)
         {
-            bool flag = false;
-            try
-            {
-
-                //获取数据库Token  
-                //Dec.Models.TicketAuth model = Dec.BLL.TicketAuth.GetTicketAuthByToken(encryptToken);
-                //if (model.Token == encryptToken) //存在  
-                //{
-                //    //未超时  
-                //    flag = (DateTime.Now <= model.ExpireDate) ? true : false;
-                //}
-            }
-            catch (Exception ex) { }
-            return flag;
+            return AuthCache.ContainsToken(token);
         }
     }
 }

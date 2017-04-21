@@ -53,8 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthCache\AuthCacheFactory.cs" />
-    <Compile Include="AuthCache\IAuthCache.cs" />
+    <Compile Include="Cache\AuthCacheFactory.cs" />
+    <Compile Include="Cache\AuthCache.cs" />
     <Compile Include="Authorization\TokenAuthorityAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
